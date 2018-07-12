@@ -1,4 +1,20 @@
-Simple and useful tools related to Agora RTC SDK
-使用方法,将需要转换的文件和脚本放在同一个目录下,参数设置为需要转换的文件名 和需要抽取的cpu架构 最多最多三个参数 中间空格隔开 eg:
-./apple-cpu-arch-extract.sh Agora_Native_SDK_for_iOS_v2_0_2_VOICE arm64 armv7
-会在同一目录下自动生成指定架构的压缩包
+Move Agora iOS Native SDK zip to this folder, and rename SDK zip to `Agora_Native_SDK_for_iOS_FULL.zip` / `Agora_Native_SDK_for_iOS_VOICE.zip` Open your terminal, cd to this folder and input  
+```
+./apple-cpu-arch-extract.sh Agora_Native_SDK_for_iOS_FULL.zip architectureType
+```
+or
+```
+./apple-cpu-arch-extract.sh Agora_Native_SDK_for_iOS_VOICE.zip architectureType
+```
+
+architectureType: Such as armv7, arm64, etc.
+you can input two architectureType at most.
+
+Finally, pressed enter and this zip will become you need sdk that includes architectures you want 
+
+Agora iOS SDK can support these following architectures:
+
+- i386
+- armv7
+- x86_64
+- arm64
