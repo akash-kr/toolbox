@@ -1,20 +1,22 @@
-Move Agora iOS Native SDK zip to this folder, and rename SDK zip to `Agora_Native_SDK_for_iOS_FULL.zip` / `Agora_Native_SDK_for_iOS_VOICE.zip` Open your terminal, cd to this folder and input  
-```
-./apple-cpu-arch-extract.sh Agora_Native_SDK_for_iOS_FULL.zip architectureType
-```
+## To-Dos
+
+1. Download apple-cpu-arch-extract.sh from to a folder on your computer/server
+2. Copy the iOS Native SDK zip to the same folder where you have copied apple-cpu-arch-extract.sh
+3. Rename the SDK to Agora_Native_SDK_for_iOS_FULL.zip or Agora_Native_SDK_for_iOS_VOICE.zip
+4. Open your terminal and cd to the folder where you have copied apple-cpu-arch-extract.sh
+5. Execute one of following commands, depending on the name of the zip file
+
+`./apple-cpu-arch-extract.sh Agora_Native_SDK_for_iOS_FULL.zip <architectureType>`
+
 or
-```
-./apple-cpu-arch-extract.sh Agora_Native_SDK_for_iOS_VOICE.zip architectureType
-```
 
-architectureType: Such as armv7, arm64, etc.
-you can input two architectureType at most.
+`./apple-cpu-arch-extract.sh Agora_Native_SDK_for_iOS_VOICE.zip <architectureType>`
 
-Finally, pressed enter and this zip will become you need sdk that includes architectures you want 
+6. A maximum of two values from the below list are supported for <architectureType>:
 
-Agora iOS SDK can support these following architectures:
+	1. i386
+	2. armv7
+	3. x86_64
+	4. arm64
 
-- i386
-- armv7
-- x86_64
-- arm64
+7. The resulting file will be the SDK that includes the architecture you need.
